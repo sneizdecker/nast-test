@@ -1,0 +1,466 @@
+@import 'sprites/sprite'
+@import 'helpers/variables'
+@import 'helpers/mixins'
+@import 'helpers/fonts'
+@import 'helpers/optimize'
+
+.page
+	display block
+
+	&:before
+		z-index -1
+		position absolute
+		top -280px
+		left -120px
+		display block
+		width 100%
+		height 410px
+		background-color $light_gray
+		transform rotate(-18deg)
+		content ''
+
+.box
+	position relative
+	overflow hidden
+	margin-x auto
+	padding-top 105px
+	max-width 1585px
+	font-family $roboto
+	font-size 16px
+	color #1A1A1A
+	clearfix()
+
+.content-center
+	margin-x auto
+	width 100%
+	max-width 1280px
+	clearfix()
+
+	&__number-block
+		margin-bottom 117px
+		padding-top 50px
+		text-align center
+		font-size 0
+
+.big-title
+	font-family $roboto_slab
+	font-size 57px
+	font-weight 700
+	text-align center
+	clearfix()
+
+	&__question
+		margin-top 10px
+		margin-right 332px
+		font-weight 400
+		font-size 48px
+		float right
+		color #4D4D4D
+
+.par
+	margin-bottom 10px
+
+.strike-txt
+	color #999999
+	text-decoration line-through
+	font-size 31px
+
+.big-txt
+	color #6C8611
+	font-weight 700
+
+.button
+	width 284px
+	height 81px
+	border none
+	border-radius 7px
+	background-color #8AB63B
+	color #fff
+	font-size 30px
+	font-weight 500
+
+	&_wide
+		width 100%
+
+.hello-block
+	position relative
+	margin-bottom 114px
+	clearfix()
+
+	&__left
+		padding-top 15px
+		display inline-block
+		clearfix()
+
+	&__right
+		margin-left 45px
+		padding-top 52px
+		display inline-block
+		max-width 420px
+		clearfix()
+
+.big-img
+	width 100%
+	max-width 703px
+
+.order-block
+	line-height 20px
+
+	&__description
+		margin-bottom 36px
+		display block
+
+	&__button
+		position relative
+		margin-bottom 36px
+		margin-left 0px
+
+		&:before
+			position absolute
+			top 33px
+			right -49px
+			display block
+			width 102px
+			height 109px
+			content ''
+			background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAABtCAMAAABkxuSTAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOVBMVEX///91TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCR1TCSY9GVgAAAAEnRSTlMAECAwQFBgcICQoLDAz9Dg8P7a81WnAAAB3UlEQVQYGe3BQZLbMAxFwQ+ZhjigIiLv/oeNlHiTTapmUuBiyt1axfo4zmFS8BKST15CUmTs7aL/cHALafISkk9eQgpeXF9mJ5fcJIc8uremW2s9TghJwcuUFIze9AW7t2b6l9a8HwkhaXI746lSzkuoVGs9Tpgu+cxuKjeB7JuKOb8NVy0fyc1VbfNIplaJjKZ6XI6masHtQ9X25BKqZj0BVznrydT3AqepHnA+VC6AfKrcB5cPlXsmECr3OAHVsxP09gXgWgAOLZDwVL0OaSpnCaF6HXiq3AZM1RswVc/B9fZpPl0LTHioXkJTvQBXPYeueg84tECSWmCAFnDQAhaht8/y0AqT0AKAFgC0AKAFAC0AaAFACwBaYIIW8Ol6+6RwLfBkaoEALXCC6hmgeg1QvQ5T9QYMlTPAVc5iut4+x6erXoOpeg1QPYehegFd9RKayj0B1Qs4Vc4SQuVswlP1fLq+jXAt4EwtMEjV2yBUr0NTOUum6nXYVWY7m26WsKnMgE0XmwzVOWDXzXHV6TBUr0FqgYSHrJ+mmzXVGLCrg0uynuRDFXYYluCynkCqxANyh7SeXHJXjYQTjuSS3VRkwA9+csluKuP8kd1UaOOW3VRrQnZTtUffTX/7BQ3HIBKT8RaPAAAAAElFTkSuQmCC")
+
+	&__slogan
+		margin-bottom 40px
+		font-size 35px
+		font-weight 500
+		line-height 36px
+
+	&__condition
+		color #808080
+		font-size 14px
+		line-height 16px
+
+.stripe-title
+	margin-bottom 35px
+	margin-x auto
+	position relative
+	width 521px
+	font-family $roboto_slab
+	font-weight 700
+	font-size 45px
+	text-align center
+	line-height 55px
+
+	&:before
+	&:after
+		position absolute
+		top 32px
+		display block
+		width 1000px
+		height 5px
+		background-color #CCCCCC
+		content ''
+
+	&:before
+		right 521px
+
+	&:after
+		left 521px
+
+.number-block
+	position relative
+	margin-x 10px
+	display inline-block
+	vertical-align top
+	width 20%
+	min-width 170px
+
+	&__item
+		position relative
+		margin-x auto
+		width 123px
+		height 123px
+		border-radius 50%
+		background-color #EA6F1C
+		line-height 123px
+		text-align center
+		font-family $roboto
+		font-size 60px
+		font-weight 600
+		color #fff
+
+		&:before
+			position absolute
+			top 5px
+			left 0
+			right 0
+			margin-x auto
+			width 103px
+			height 103px
+			border-radius 50%
+			border 5px solid #fff
+			content ''
+
+		&_light
+			background-color #FCCF97
+
+		&_medium
+			background-color #F2A75E
+
+		&_hard
+			background-color #F38B32
+
+	&__content
+		padding-top 30px
+		font-size 21px
+		text-align center
+		color #333333
+
+.slider
+	position relative
+	margin-bottom 90px
+	padding-top 20px
+	margin-x auto
+	display block
+
+	&:before
+	&:after
+		z-index 1
+		position absolute
+		top 0
+		display block
+		width 15%
+		height 100%
+		content ''
+
+	&:before
+		left 0
+		background-image linear-gradient(90deg, white, transparent)
+
+	&:after
+		right 0
+		background-image linear-gradient(-90deg, white, transparent)
+
+	&__item
+		margin-x 20px
+
+	&__item-pic
+		width 100%
+
+	&__item-title
+		padding-top 24px
+		font-size 21px
+		text-align center
+
+.slider-prev
+.slider-next
+	z-index 2
+	position absolute
+	top 50%
+	margin-top -31px
+	width 62px
+	height 62px
+	background-color #fff
+	border-radius 50%
+	border none
+	transition-propery box-shadow
+	transition-duration .2s
+
+.slider-prev
+	left 4%
+
+.slider-next
+	right 4%
+
+.slider-prev:before
+.slider-next:before
+	position absolute
+	top 50%
+	margin-top -14px
+	display block
+	content ''
+	width 0
+	height 0
+	border-top 14px solid transparent
+	border-bottom 14px solid transparent
+
+.slider-prev:before
+	left 50%
+	margin-left -10px
+	border-right 14px solid #8AB73B
+
+.slider-next:before
+	right 50%
+	margin-right -10px
+	border-left 14px solid #8AB73B
+
+.order-form-wrapper
+	position relative
+	margin-top -56px
+	overflow hidden
+
+	&:before
+		z-index -1
+		position absolute
+		top -280px
+		left -120px
+		display block
+		width 100%
+		height 410px
+		background-color $light_gray
+		transform rotate(-18deg)
+		content ''
+
+	&:after
+		z-index -1
+		position absolute
+		bottom -280px
+		right -120px
+		display block
+		width 100%
+		height 410px
+		background-color $light_gray
+		transform rotate(-18deg)
+		content ''
+
+.order-form
+	margin-top 73px
+	margin-x auto
+	padding-x 64px
+	padding-y 30px
+	width 582px
+	border 5px solid #DBDBD2
+	border-radius 15px
+	text-align center
+	background-color #fff
+
+	&__title
+		font-size 35px
+		line-height 40px
+
+	&__condition
+		margin-bottom 23px
+		padding-top 23px
+		font-size 15px
+		color $gray
+
+	&__field
+		margin-bottom 20px
+		padding-x 10px
+		display block
+		height 70px
+		width 100%
+		border 3px solid #DBDBD2
+		border-radius 7px
+
+	&__field[placeholder]
+		color #B3B3B3
+		font-size 21px
+		text-align center
+
+	&__clarification
+		margin-top 28px
+		font-size 15px
+		color $gray
+		text-align left
+
+.tos
+	padding-top 60px
+	margin-bottom 60px
+	text-align center
+
+	&__link
+		font-size 22px
+		color $gray
+		border-bottom 1px solid $gray
+		text-decoration none
+
+		&:hover
+			border-bottom-color transparent
+
+@media screen and (max-width 1180px)
+	.hello-block__left
+		display block
+		text-align center
+
+	.hello-block__right
+		padding-top 25px
+		margin-x auto
+		display block
+
+	.big-title__question
+		margin-right 0
+		float none
+
+	.order-block__button:before
+			right 10px
+
+	.slider-prev
+	.slider-next
+		box-shadow 0 1px 2px #767676
+
+@media screen and (max-width 770px)
+	.hello-block
+		margin-bottom 50px
+
+	.page:before
+		top -342px
+
+	.order-form-wrapper:before
+		top -342px
+
+	.order-form-wrapper:after
+		bottom -342px
+
+	.box
+		padding-top 50px
+
+	.number-block
+		margin-bottom 30px
+		width 33%
+
+	.content-center__number-block
+		margin-bottom 40px
+		padding-top 10px
+
+	.stripe-title
+		font-size 34px
+		max-width 700px
+		width 100%
+
+	.number-block__content
+		font-size 17px
+
+	.slider
+		margin-bottom 45px
+
+@media screen and (max-width 600px)
+	.big-title
+	.big-title__question
+		font-size 40px
+
+	.big-title
+		padding-x 10px
+
+	.order-form
+		padding-x 30px
+		width 360px
+
+	.order-form__title
+		font-size 22px
+		line-height 25px
+
+	.order-block__button:before
+		display none
+
+	.order-block__button
+		text-align center
+
+	.order-block
+		padding-x 20px
+
+	.order-block__slogan
+		font-size 28px
+
+	.number-block
+		width 70%
+
+	.slider-prev
+	.slider-next
+		top 35%

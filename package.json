@@ -1,0 +1,25 @@
+{
+  "name": "one-touch-test",
+  "version": "1.0.0",
+  "description": "one-touch test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sneizdecker",
+  "license": "ISC",
+  "devDependencies": {
+    "bemto.jade": "^1.0.3",
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-jsbeautifier": "^2.0.3",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.5.0",
+    "gulp.spritesmith": "^6.2.1",
+    "merge-stream": "^1.0.0",
+    "vinyl-buffer": "^1.0.0"
+  }
+}

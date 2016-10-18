@@ -1,0 +1,112 @@
+include ../node_modules/bemto.jade/bemto
+include helpers/mixins
+
+doctype
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimal-ui')
+		title Test for Nastya
+		link(rel='stylesheet' href='assets/plugins/slick/slick.css')
+		link(rel='stylesheet' href='assets/styles/app.css')
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700&subset=cyrillic')
+
+	+b('body').page
+		+b.bg-triangle._top
+		+b.box
+			+b.content-center
+				+b('h1').big-title
+					| Устали ходить за продуктами <br>
+					+e('span').__question
+						| в магазин?
+				+b.hello-block
+					+e.__left
+						+b('img').big-img(src='assets/images/hello-img.png')
+					+e.__right
+						+b.order-block
+							+e.__description
+								+b('p').par
+									| А что, если мы вам предложим коробку <br> с продуктами и рецептами на 3 ужина <br> для двоих по специальной цене?
+								+b('p').par
+									| Заманчиво? Спешите заказать! <br> Доставим бесплатно.
+							+e.__button
+								+b('button').button
+									| Заказать
+							+e.__slogan
+								| 3 ужина на двоих <br>
+								| всего за
+								+b('span').strike-txt 2000 Р
+								+b('span').big-txt 1600 Р
+							+e.__condition
+								| Успейте заказать до полуночи пятницы, <br>
+								| чтобы получить коробку в воскресенье, 25 <br>
+								| сентября.
+			+b('h2').stripe-title
+				| Как это работает?
+			+b.content-center
+				+e.__number-block
+					+b.number-block
+						+e.__item._light 1
+						+e.__content
+							| Мы закупаем свежие продукты и наши шеф-повара создают для вас лучшие рецепты
+					+b.number-block
+						+e.__item._medium 2
+						+e.__content
+							| Вы оформляете заказ на нашем сайте
+					+b.number-block
+						+e.__item._hard 3
+						+e.__content
+							| Мы бесплатно доставляем коробку с продуктами и рецептами на 3 ужина до вашей двери
+					+b.number-block
+						+e.__item 4
+						+e.__content
+							| Вы готовите по нашему рецепту - 30 минут и ваш вкусный ужин готов!
+			+b('h2').stripe-title
+				| Меню на 3 ужина
+			+b.slider#slider
+				+e.__item
+					+e('img').__item-pic(src='assets/images/slider-img.jpg')
+					+e.__item-title
+						| Паста с мясными шариками в томатном соусе с сыром
+				+e.__item
+					+e('img').__item-pic(src='assets/images/slider-img.jpg')
+					+e.__item-title
+						| Паста с мясными шариками в томатном соусе с сыром
+				+e.__item
+					+e('img').__item-pic(src='assets/images/slider-img.jpg')
+					+e.__item-title
+						| Паста с мясными шариками в томатном соусе с сыром
+				+e.__item
+					+e('img').__item-pic(src='assets/images/slider-img.jpg')
+					+e.__item-title
+						| Паста с мясными шариками в томатном соусе с сыром
+				+e.__item
+					+e('img').__item-pic(src='assets/images/slider-img.jpg')
+					+e.__item-title
+						| Паста с мясными шариками в томатном соусе с сыром
+			+b('h2').stripe-title
+				| Не прощелкайте ;)
+		+b.order-form-wrapper
+			+b.order-form
+				+e('h3').__title
+					| Закажите 3 ужина<br>
+					| на двоих за
+					+b('span').big-txt 1600 Р
+				+e.__condition
+					| Только на первый заказ
+				form(action='' id='order-form')
+					+e('input').__field(type='text' placeholder='Ваше имя')
+					+e('input').__field(type='text' placeholder='Ваш телефон')
+					+e('input').__field(type='text' placeholder='Ваш email')
+					+b('button').button._wide
+						| Заказать
+				+e.__clarification
+					| Успейте заказать до полуночи пятницы, чтобы получить коробку в воскресенье,  25 сентября.  Доставка бесплатно!
+			+b.tos
+				+e('a').__link(href='javascript:void(0);')
+					| Условия обслуживания
+
+		//- Scripts are here
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+		script(src='assets/plugins/slick/slick.min.js')
+		script(src='assets/scripts/app.js')

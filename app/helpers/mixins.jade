@@ -1,0 +1,27 @@
+//- Link
+mixin link(url, anchor)
+	+b('a').link&attributes(attributes)(href='#{ url }')
+		| #{ anchor }
+
+//- Field
+mixin field(label, placeholder, error)
+	+b.field&attributes(attributes)
+		+e.label
+			| #{ label }
+		+e('input').input(type='text' placeholder='#{ placeholder }')
+		if error
+			+e.error
+				| #{ error }
+
+//- Radio toggle
+mixin radio-toggle(text, description, id, name, checked)
+	+b.radio-toggle&attributes(attributes)
+		if checked
+			+e('input').checker(type='radio' id='#{ id }' name='#{ name }' checked)
+		else
+			+e('input').checker(type='radio' id='#{ id }' name='#{ name }')
+		+e.name(for='#{ id }')
+			+e.title
+				| #{ text }
+			+e.description
+				| #{ description }
